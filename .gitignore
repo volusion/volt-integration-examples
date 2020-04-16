@@ -1,4 +1,6 @@
 # Dependency directories
 node_modules/
-#misc
+# Google Service Account Key
+google-service-account.json
+# misc
 .DS_Store

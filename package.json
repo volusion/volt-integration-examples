@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "./deploy.sh",
+    "start": "functions-framework --target=local",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@google-cloud/functions-framework": "^1.5.0"
+    "@google-cloud/firestore": "^3.6.0",
+    "@google-cloud/functions-framework": "^1.5.0",
+    "axios": "^0.19.2"
   }
 }
