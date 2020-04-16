@@ -10,7 +10,10 @@ This repo is helpful to start with if you want to use Google Cloud Functions. Sp
 
 ## Usage
 
+Install the [Google Cloud SDK](https://cloud.google.com/sdk) if you don't already have it. Create a new project in [console](http://console.cloud.google.com/) and enable Cloud Functions API for that project. Set your terminal to use that project. 
+
 ```shell
+npm install
 npm start
 ```
 
