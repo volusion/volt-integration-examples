@@ -35,12 +35,12 @@ Each file in `/functions` is an endpoint. Feel free to create more, or less by:
 
 # Example: ShipStation
 
-This integration exists at `/functions/toShipstation.js`
+This integration exists at `/functions/toShipStation.js`
 
 Integrate [Volt by Volusion](https://volusion.com/volt) to [ShipStation](https://www.shipstation.com). This sample is intended to do the heavy lifting of the mapping exercise, and provide the framework for communicating with both the Volt and ShipStation APIs. It's all open source, giving you the
 flexibility to customize it for your business. If you don't like free, flexible code, you can always pay for a [Zapier point & click Volt (V2) --> ShipStation integration](https://zapier.com/apps/shipstation/integrations/volusion/21127/create-new-shipstation-orders-from-new-volusion-orders) instead.
 
-Set your Shipstation environment variables:
+Set your ShipStation environment variables:
 ```shell
 SHIPSTATION_API_KEY=8bha9aca512444058405e0ae29a9f716
 SHIPSTATION_API_SECRET=4191eb59c9d74de1a91b8wh1ap12a9ve
