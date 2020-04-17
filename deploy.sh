@@ -1,7 +1,8 @@
 # deploy.sh
 
 # store deployment command into a string with character % where function name should be
-deploy="gcloud functions deploy % --runtime nodejs10 --trigger-http --allow-unauthenticated"
+# TODO: read the .env file instead of hardcoding here:
+deploy="gcloud functions deploy % --runtime nodejs10 --trigger-http --allow-unauthenticated --env-vars-file .env.yaml"
 
 # find all functions in index.js (looking at exports.<function_name>) using sed
 # then pipe the function names to xargs

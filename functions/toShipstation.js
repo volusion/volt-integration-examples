@@ -1,9 +1,7 @@
-require('dotenv').config()
-const voltClient = require('@volusion/volt-api');
+require('env-yaml').config()
 const objectMapper = require('object-mapper');
 
 // Credentials
-const VOLT_API_KEY = process.env.VOLT_API_KEY
 const SHIPSTATION_API_KEY = process.env.SHIPSTATION_API_KEY
 const SHIPSTATION_API_SECRET = process.env.SHIPSTATION_API_SECRET
 
@@ -129,7 +127,8 @@ async function sendVoltOrdersToShipStation(req) {
 }
 
 exports.handler = async (req, res) => {
-    const response = await sendVoltOrdersToShipStation(req)
-    console.log('Successfully inserted shipstation order')
+    const response = await sendVoltOrdersToShipStation(req);
+    console.log('Successfully inserted shipstation order');
     res.send('Successfully inserted shipstation order');
+    return;
   };
