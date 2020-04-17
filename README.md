@@ -1,19 +1,30 @@
-# Cloud Functions Starter Kit
+# Volt integration examples
 
-This repo is helpful to start with if you want to use Google Cloud Functions. Specifically, the [Functions Framework](https://cloud.google.com/functions/docs/functions-framework).
+Find example integrations with ⚡️[Volt by Volusion](https://www.volusion.com/volt) here, mostly using webhooks that fire from Volt to your Google Cloud Functions.
 
-## Why this repo?
+Google Cloud Functions is part of Google's [Free Tier](https://cloud.google.com/free), providing 2 million requests per month for free. 😲 And the way we're writing our code using [FaaS](https://github.com/GoogleCloudPlatform/functions-framework-nodejs) doesn't lock you into Cloud Functions either… if you later decide you want to run this code on docker, or using Google Cloud Run, or even outside of Google in any Knative-based environment, have at it. But for this repo we're going to keep it simple, cheap, and minimal maintenance.
 
-1. A single file structure housing multiple functions
-2. A way to deploy all your functions with a single command `npm run deploy`
-3. A way to run all your functions locally on a single port for easier development
+File structure is based on [Cloud Functions Starter Kit](https://github.com/volusion/cloud-functions-hello-world)
 
-## Usage
+## Install
 
-Install the [Google Cloud SDK](https://cloud.google.com/sdk) if you don't already have it. Create a new project in [console](http://console.cloud.google.com/) and enable Cloud Functions API for that project. Set your terminal to use that project. 
+Clone this repo to your local machine, then in your terminal run:
 
 ```shell
 npm install
+```
+
+Create a new file called `.env` where you'll set the environment variables with your API Keys
+```shell
+VOLT_API_KEY=9fduAnbishA0N9BXlNQ6zC:9kaub81gaVl1oJfXiIbal8
+```
+👆 this is not a real key, replace with your own
+
+Install the [Google Cloud SDK](https://cloud.google.com/sdk) if you don't already have it. Create a new project in [console](http://console.cloud.google.com/) and enable Cloud Functions API for that project. Set your terminal to use that project. 
+
+## Usage
+
+```shell
 npm start
 ```
 
@@ -21,6 +32,20 @@ Each file in `/functions` is an endpoint. Feel free to create more, or less by:
 
 1. Duplicating one of those example files in `/functions`
 2. Referencing that new file in your `index.js`
+
+# Example: ShipStation
+
+This integration exists at `/functions/toShipstation.js`
+
+Integrate [Volt by Volusion](https://volusion.com/volt) to [ShipStation](https://www.shipstation.com). This sample is intended to do the heavy lifting of the mapping exercise, and provide the framework for communicating with both the Volt and ShipStation APIs. It's all open source, giving you the
+flexibility to customize it for your business. If you don't like free, flexible code, you can always pay for a [Zapier point & click Volt (V2) --> ShipStation integration](https://zapier.com/apps/shipstation/integrations/volusion/21127/create-new-shipstation-orders-from-new-volusion-orders) instead.
+
+Set your Shipstation environment variables:
+```shell
+SHIPSTATION_API_KEY=8bha9aca512444058405e0ae29a9f716
+SHIPSTATION_API_SECRET=4191eb59c9d74de1a91b8wh1ap12a9ve
+```
+👆 these are not real keys, replace with your own
 
 ## Deploy
 
