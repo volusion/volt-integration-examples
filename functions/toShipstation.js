@@ -1,7 +1,7 @@
 require('env-yaml').config()
 const objectMapper = require('object-mapper');
 
-// Credentials
+// Credentials 
 const SHIPSTATION_API_KEY = process.env.SHIPSTATION_API_KEY
 const SHIPSTATION_API_SECRET = process.env.SHIPSTATION_API_SECRET
 
