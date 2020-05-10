@@ -2,7 +2,7 @@
 
 // require each functions
 const helloWorld = require('./functions/helloWorld');
-const toShipStation = require('./functions/toShipstation');
+const toShipStation = require('./functions/toShipStation');
 
 // map each function to an export
 // when we deploy this code using `npm run deploy` it will deploy each function individually:
