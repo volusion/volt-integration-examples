@@ -1,4 +1,4 @@
-require('env-yaml').config()
+require('env-yaml').config({ path: '.env.yaml' })
 const objectMapper = require('object-mapper');
 
 // Credentials 
