@@ -11,7 +11,7 @@ async function sendVoltOrdersToShipStation(req) {
   // catch the order from the Volt webhook
   /***************************************************************************/
   const order = req.body.value;
-  //console.log(order)
+  console.log("order", JSON.stringify(order))
 
   /***************************************************************************/
   // map volt to ShipStation
@@ -110,6 +110,7 @@ async function sendVoltOrdersToShipStation(req) {
   );
 
   // call promisified shipstation addOrder function
+  console.log("orderInShipStationFormat",JSON.stringify(orderInShipStationFormat)); // success
   const addOrder = (orderInShipStationFormat) =>
     new Promise((resolve, reject) => {
       shipstation.addOrder(orderInShipStationFormat, (err, res, body) => {
@@ -117,7 +118,7 @@ async function sendVoltOrdersToShipStation(req) {
           return reject(err)
         }
         // body is the successful data model of shipstation in case you wanted to see their data model after successful insert
-        // console.log("body",body); // success
+        console.log("shipStationResponse",JSON.stringify(body)); // success
         return resolve()
       })
     })

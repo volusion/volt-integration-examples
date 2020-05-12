@@ -12,6 +12,7 @@ async function sendShipStationTrackingNumbersToVolt(req) {
   // catch the ShipStation webhook
   /***************************************************************************/
   const shipNotifyEvent = req.body;
+  console.log("shipNotifyEvent", JSON.stringify(shipNotifyEvent))
 
   /***************************************************************************/
   // ShipStation hooks require us to fetch the actual hook data at a resource_url
@@ -44,9 +45,10 @@ async function sendShipStationTrackingNumbersToVolt(req) {
   }
 
   // debug output
+  console.log("data", JSON.stringify(data))
   console.log("orderNumber", data.shipments[0].orderNumber)
   console.log("orderKey", data.shipments[0].orderKey)
-  console.log("fulfillmentEvent", fulfillmentEvent)
+  console.log("fulfillmentEvent", JSON.stringify(fulfillmentEvent))
 
   /***************************************************************************/
   // import the tracking number into Volt
