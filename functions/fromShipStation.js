@@ -23,7 +23,6 @@ async function sendShipStationTrackingNumbersToVolt(req) {
         password: SHIPSTATION_API_SECRET
       }
     });
-  data.shipments[0].trackingNumber = "test-tracking-1"
   
   /***************************************************************************/
   // map ShipStation to Volt
