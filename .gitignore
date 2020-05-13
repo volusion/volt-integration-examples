@@ -5,3 +5,5 @@ google-service-account.json
 # misc
 .DS_Store
 .env.yaml
+# gcloud sdk config
+.gcloud
