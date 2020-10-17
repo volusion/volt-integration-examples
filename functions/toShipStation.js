@@ -54,7 +54,7 @@ async function sendVoltOrdersToShipStation(req) {
                       return "awaiting_shipment";
                   case "Complete":
                       return "shipped";
-                  case "Cancelled":
+                  case "Canceled":
                       return "cancelled";
               }
           }
