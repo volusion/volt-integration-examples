@@ -14,7 +14,7 @@
   "dependencies": {
     "@google-cloud/functions-framework": "^1.5.1",
     "@volusion/volt-api": "^0.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "dotenv": "^8.2.0",
     "env-yaml": "^0.1.2",
     "node-shipstation": "^0.1.3",
